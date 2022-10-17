@@ -89,7 +89,7 @@
         <div class="naslovna__content--2">
              <div class="heading-secondary">RESPONSIBLE AND PROFESSIONAL</div>
              <div class="naslovna__content-txt">
-                  Today, having a mechanical keyboard echhaces your daily computing expirience wether you use it for work or hobbies. Mechanical keyboards are prefered by many because they offer faster response times, better durability, N-key rollover, tons of customization, 
+                  Today, having a mechanical keyboard enhances your daily computing expirience wether you use it for work or hobbies. Mechanical keyboards are prefered by many because they offer faster response times, better durability, N-key rollover, tons of customization, 
 and are incredibly satisfying to use.
              </div>
        </div>

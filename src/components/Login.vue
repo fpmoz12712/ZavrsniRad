@@ -16,7 +16,7 @@
                     <input type="password" id="password" placeholder="Lozinka" v-model="password" >
                 </div>
 
-                <button class="form__btn" @click.prevent="signIn">Prijavi se</button>
+                <button class="form__btn" @click.prevent="signIn">Sign in</button>
 
             </form>
         </div>
