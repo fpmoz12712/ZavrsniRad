@@ -1,0 +1,30 @@
+.btn-primary,
+.btn-secondary{
+    @extend %btn-prim-sec;
+}
+    
+
+
+.btn-secondary{
+    color: $color-white;
+    border: 3px solid $color-white;
+
+    //MEDIA QUERY phone
+    @include respond(phone){
+        font-size: 2rem;
+        padding: 2rem 1.5rem;
+
+    }
+}
+
+.btn-primary{
+    border: 3px solid $color-primary;
+    color: $color-primary;
+
+    //MEDIA QUERY phone
+    @include respond(phone){
+        font-size: 2rem;
+        padding: 2rem 1.5rem;
+
+    }
+}

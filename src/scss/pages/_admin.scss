@@ -1,0 +1,274 @@
+.admin{
+    grid-row: 2/4;
+    grid-column: center-start/center-end;
+
+   & > *{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+   }
+    //MEDIA QUERY phone
+    @include respond(phone){
+        grid-column: full-start/full-end;
+    }
+
+    .bar-heading{
+        align-self: stretch;
+        margin: 7rem 0;
+    }
+}
+
+//Phone number
+.addPhoneNum{
+    &__form{
+        
+
+        input{
+            font-size: 2rem;
+            padding: 2rem;
+            border: 2px solid $color-primary;
+            margin-bottom: 4rem;
+            
+        }
+
+        button{
+            padding: 2rem;
+            font-size: 2rem;
+            font-weight: bold;
+            outline: none;
+            color: $color-white;
+            background-color: $color-secondary;
+            border: 2px solid $color-secondary;
+            margin-left: 3rem;
+        }
+    }
+
+    //box
+
+    &__box{
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        border: 2px solid $color-primary;
+        &:not(:last-child){
+            margin-bottom: 3rem;
+        }
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 50%;
+
+        //MEDIA QUERY phone
+        @include respond(phone){
+            width: 90%;
+            font-size: 3rem;
+           
+        }
+
+        .deleteNum{
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            font-family: $font-barHeading;
+            background-color: red;
+            color: $color-white;
+            @include flex-center;
+            cursor: pointer;
+
+        }
+    }
+}
+
+
+//Proizvodi
+
+.proizvodi{
+
+   
+    &__form{
+        input{
+            font-size: 2rem;
+            padding: 2rem;
+            border: 2px solid $color-primary;
+            margin-bottom: 4rem;
+
+            //MEDIA QUERY phone
+            @include respond(phone){
+                font-size: 2.5rem;
+            
+            }
+        }
+
+        button{
+            padding: 2rem;
+            font-size: 2rem;
+            color: $color-white;
+            background-color: $color-secondary;
+            border: 2px solid $color-secondary;
+            cursor: pointer;
+            margin-left: 3rem;
+
+            //MEDIA QUERY phone
+            @include respond(phone){
+                font-size: 2.5rem;
+            
+            }
+        }
+    }
+
+    &__list{
+        font-family: $font-barHeading;
+        color: $color-primary;
+       display: grid;
+       grid-template-columns: repeat(3 ,1fr);
+       gap: 2rem;
+      
+        //MEDIA QUERY phone
+        @include respond(phone){
+            grid-template-columns: 1fr;
+           
+        }
+
+        &--item{
+            font-size: 2rem;
+            border: 2px solid $color-primary;
+            display: inline-block;
+            padding: 1rem 2rem;
+            cursor: pointer;
+
+            //MEDIA QUERY phone
+            @include respond(phone){
+                font-size: 3rem;    
+               
+            }
+
+            &:not(:last-child){
+                // margin-bottom: 3rem;
+            }
+
+            &:hover{
+                background-color: $color-secondary;
+                color: $color-white;
+            }
+ 
+        }
+
+        .activeListItem{
+
+            background-color: $color-secondary;
+            color: $color-white;
+            border: 2px solid $color-secondary;
+        }
+    }
+
+}
+
+//Add img
+.proizvodi-action{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+
+    //MEDIA QUERY phone
+    @include respond(phone){
+       flex-direction: column;
+    }
+
+    
+.form__addimg{
+
+     //MEDIA QUERY phone
+     @include respond(phone){
+        flex-direction: column;
+        margin-bottom: 4rem;
+        width: 100%;
+
+        @include flex-center;
+     }
+
+
+    input{
+        font-size: 1.5rem;
+        padding: 1.5rem 2.5rem;
+        border: 2px solid $color-primary;
+
+         //MEDIA QUERY phone
+        @include respond(phone){
+            font-size: 2rem;
+            align-self: stretch;
+            margin: 0 3rem;
+           
+        }
+    }
+
+    .addImgFile{
+        font-family: $font-barHeading;
+        padding: 1.5rem 2.5rem;
+        font-size: 1.5rem;
+        color: $color-white;
+        background-color: $color-secondary;
+        border: 2px solid $color-secondary;
+        cursor: pointer;
+        margin-left: 3rem;
+
+        //MEDIA QUERY phone
+        @include respond(phone){
+            font-size: 3rem;
+            align-self: stretch;
+            margin: 3rem 3rem 0 3rem;
+        }
+    }
+}
+
+.deleteProizvod{
+    font-family: $font-barHeading;
+        padding: 1.5rem 2.5rem;
+        font-size: 1.5rem;
+        color: $color-white;
+        background-color: red;
+       cursor: pointer;
+
+       //MEDIA QUERY phone
+       @include respond(phone){
+        align-self: stretch;
+        font-size: 3rem;
+        margin: 2rem 3rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+}
+
+}
+
+.adminBoxImg{
+    position: relative;
+
+    .deleteImg{
+        width: 6rem;
+        height: 6rem;
+        background-color: red;
+        color: $color-white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include flex-center;
+        font-size: 3rem;
+        font-family: $font-barHeading;
+        cursor: pointer;
+
+        //MEDIA QUERY phone
+        @include respond(phone){
+            font-size: 6rem;
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+
+}
+
+

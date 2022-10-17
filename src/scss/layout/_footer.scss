@@ -1,0 +1,227 @@
+.footer{
+    grid-column: center-start/center-end;
+    grid-row: 4/5;
+    background-color: $color-primary;
+    color: $color-white;
+    position: relative;
+    font-family: $font-barHeading;
+
+    //Footer Overlay
+    &-overlay{
+        grid-column: full-start/full-end;
+        grid-row: 4/5;
+        background-color: $color-primary;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    //Footer Box
+    &__box{
+        
+        display: flex;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        justify-content: center;
+
+        //MEDIA QUERY tab-port
+        @include respond(tab-port){
+           flex-direction: column;
+        }
+
+
+
+        & > *:not(:last-child) {
+            border-right: 1px solid $color-white;
+            flex: 1;
+            margin-right: 5rem;
+
+            //MEDIA QUERY tab-port
+            @include respond(tab-port){
+                border-right: none;
+                border-bottom: 1px solid $color-white;
+                margin-right: 0;
+                margin-bottom: 3rem;
+            }
+        }
+        
+        svg{
+            width: 3rem;
+            height: 3rem;
+            fill: $color-white;
+            transition: all .2s;
+            cursor: pointer;
+
+            //MEDIA QUERY tab-port
+            @include respond(tab-port){
+                width: 5rem;
+                height: 5rem;
+           }
+
+
+            &:hover{
+                fill: $color-secondary;
+
+            }
+
+        }
+
+        &-1,
+        &-2,
+        &-3{
+            font-size: 1.5rem;
+
+            //MEDIA QUERY tab-port
+            @include respond(tab-port){
+                text-align: center;
+
+                h3{
+                    font-size: 3rem;
+                }
+            }
+
+            ul {
+                list-style: none;
+            }
+        }
+
+
+        //Footer Box 1
+        &-1{
+           
+            h3{
+                margin-bottom: 3rem;
+                
+            }
+
+            ul{
+                padding-right: 5rem;
+
+                //MEDIA QUERY tab-port
+                @include respond(tab-port){
+                     padding-right: 0;
+                     font-size: 2rem;
+                }
+
+                
+
+                li{
+                    cursor: pointer;
+
+                   &:not(:last-child){
+                        margin-bottom: 1rem;
+                    }
+
+                    //MEDIA QUERY tab-port
+                    @include respond(tab-port){
+                        margin-bottom: 2rem;
+                    }
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+        }
+
+
+        //Footer Box 2
+        &-2{
+            h3{
+                margin-bottom: 3rem;
+            }
+
+            ul{
+                padding-right: 5rem;
+
+                //MEDIA QUERY tab-port
+                @include respond(tab-port){
+                    padding-right: 0;
+                    font-size: 2rem;
+               }
+
+                li{
+                    margin-bottom: 1rem;
+                }
+            }
+
+            &--icon{
+                margin-top: 2rem;
+                width: 40%;
+                display: flex;
+                justify-content: space-between;
+
+                //MEDIA QUERY tab-port
+                @include respond(tab-port){
+                    width: 100%;
+                    justify-content: space-evenly;
+                    margin: 3rem 0;
+               }
+               
+            }
+        }
+
+
+        //Footer Box 3
+        &-3{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            //MEDIA Query tab-port
+            @include respond(tab-port){
+                align-items:center;
+               
+            }
+
+            h3{
+                margin-bottom: 3rem;
+            }
+
+            span{
+                margin-bottom: 1rem;
+
+                //MEDIA Query tab-port
+                @include respond(tab-port){
+                    font-size: 2.2rem;
+                
+                }
+            }
+        }
+    }
+
+    //Footer logo
+    &__logo {
+
+        //MEDIA Query tab-port
+        @include respond(tab-port){
+            margin-top: 3rem;
+        }
+    }
+
+    
+    //Footer botoom txt
+    &__txt{
+        margin: 2rem 0;
+        font-size: 1.5rem;
+
+        //MEDIA Query tab-port
+        @include respond(tab-port){
+            font-size: 1.8rem;
+        }
+
+        &-dm{
+            color: $color-secondary
+        }
+
+        a{
+            color: $color-white;
+            text-decoration: none;
+        }
+    }
+
+}

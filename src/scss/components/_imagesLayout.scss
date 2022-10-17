@@ -1,0 +1,95 @@
+.images-layout{
+
+    &__box{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        //Media Query tab-port
+        @include  respond(tab-port){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+         }
+
+         //MEDIA QUERY phone
+         @include respond(phone){
+            grid-template-columns: 1fr;
+
+        }
+        
+
+        & > * {
+            width: 20rem;
+            height: 25rem;
+            margin-bottom: 4rem;
+            overflow: hidden;
+            cursor: pointer;
+             box-shadow:  1rem 1.5rem 2rem $primary-shadow;
+          
+
+            //MEDIA QUERY phone
+            @include respond(phone){
+                width: 70%;
+                height: 90%;
+
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                display: block;
+                object-fit: cover;
+
+                transition: all .3s;
+
+                &:hover{
+                   transform: scale(1.1);
+                }
+                
+            }
+
+
+        }
+    }
+}
+
+.showImg{
+   
+        @include flex-center;
+        position: fixed;
+        min-width: 100%;
+        min-height: 100%;
+        background-color: rgba(0, 0, 0, 0.719);
+       
+        top: 0;
+        left: 0;
+        z-index: 10000;
+       
+
+    img{
+        z-index: 100001;
+        width: auto;
+        height: 80%;
+
+
+        //Media Query tab-port
+        @include  respond(tab-port){
+            width: 80%;
+            height: auto;
+         }
+
+        &:hover{
+            transform: scale(1);
+         }
+    }    
+}
+
+//Gif
+
+.gifBox{
+    @include flex-center;
+    img{
+        width: 10rem;
+    }
+}

@@ -1,0 +1,46 @@
+.proizvodi{
+    grid-row: 2/4;
+    grid-column: center-start/center-end;
+
+    //MEDIA QUERY phone
+    @include respond(phone){
+        grid-column: full-start/full-end;
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+
+.proizvod-info{
+    grid-row: 2/4;
+    grid-column: center-start/center-end;
+
+
+    
+
+    //MEDIA QUERY phone
+    @include respond(phone){
+        grid-column: full-start/full-end;
+    }
+
+   div:first-of-type{
+       margin-bottom: 5rem;
+   }
+
+   
+}
+
+.proizvodInfoAdmin{
+    width: 100%;
+    
+    //MEDIA QUERY phone
+    @include respond(tab-port){
+        width: 100%;
+    }
+
+}
+

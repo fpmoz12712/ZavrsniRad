@@ -1,0 +1,148 @@
+.header{
+    display: flex;
+    align-items: center;
+
+    grid-column: full-start/full-end;
+    grid-row: 1/2;
+
+    //MEDIA QUERY
+    @include respond(tab-port){
+        flex-direction: column;
+        background-color: $color-primary;
+    }
+
+    
+
+    &__logo{
+        margin: 0 8rem 0 2rem;
+
+        img{
+            border-radius: 50%;
+            width: 80px;
+        }
+
+        //MEDIA QUERY
+        @include respond(tab-port){
+            margin: 4rem 0;
+        }
+        
+    }
+
+    &__nav{
+        flex: 1;
+        align-self: stretch;
+        background-color: $color-primary;
+        
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        box-shadow: 0 1rem 1rem rgba(0,0,0,.2);
+
+        //MEDIA QUERY
+        @include respond(tab-port){
+            justify-content: center;
+        }
+        
+
+        &::before{
+            content: " ";
+            position: absolute;
+            display: block;
+            width: 5rem;
+            height: 100%;
+            top: 0;
+            left: -25px;
+            z-index: 10;
+            background: $color-secondary;
+           
+            -ms-transform: skew(-30deg, 0deg);
+            -webkit-transform: skew(-30deg, 0deg);
+            transform: skew(-30deg, 0deg);
+            box-shadow: 2px 1rem 1rem rgba(0,0,0,.2);
+
+            @include respond(tab-port){
+                display: none;
+            }
+            
+        }
+
+        ul{
+            z-index: 100;
+            font-size: 1.4rem;
+            font-family: $font-barHeading;
+            text-transform: uppercase;
+            color: $color-white;
+            list-style: none;
+            margin-right: 4rem;
+            overflow: hidden;
+            
+            @include flex-center;
+
+            //MEDIA QUERY
+            @include respond(tab-port){
+                margin-right: 0;
+                width: 100%;
+                justify-content: space-evenly;
+                padding: 2rem 0;
+                font-size: 2.5rem;
+            }
+
+            li{
+                cursor: pointer;
+                padding: 0.7rem 1.5rem;
+                position: relative;
+
+                &:not(:last-child){
+                    margin-right: 2rem;
+                }
+
+                //test
+               &::after{
+                    content: '';
+                    width: 100%;
+                    height:0;
+                    position: absolute;
+                    bottom: -100%;
+                    left: 0;
+                    background-color: $color-secondary;
+                    transition: all 0.2s;
+
+                   
+                }
+
+                &:hover::after{
+                    height: 2.4rem;
+
+                    //MEDIA QUERY Active
+                    @include respond(tab-port){
+                        height: 4rem;
+                    }
+                }
+            }
+
+            //Active link
+            .router-link-exact-active{
+                &::after{
+                    content: '';
+                    width: 100%;
+                    height: 2.4rem;
+                    position: absolute;
+                    bottom: -100%;
+                    left: 0;
+                    background-color: $color-secondary;
+                    transition: all 0.2s;
+
+                    //MEDIA QUERY Active
+                    @include respond(tab-port){
+                        height: 4rem;
+                    }
+
+                   
+                }
+            }
+
+        }
+    }
+
+}
+

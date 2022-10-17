@@ -1,0 +1,33 @@
+.login{
+    grid-column: center-start/center-end;
+    grid-row: 2/4;
+   
+    
+    //MEDIA QUERY phone
+    @include respond(phone){
+        grid-column: full-start/full-end;
+    }
+
+    &__box{
+        margin: 5rem auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+
+        form{
+            margin-top: 5rem;
+        }
+
+        img{
+            width: 200px;
+            border-radius: 50%;
+        }
+
+        //MEDIA QUERY phone
+        @include respond(phone){
+            width: 80%;
+        }
+    }
+
+}
